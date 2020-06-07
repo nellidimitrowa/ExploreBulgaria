@@ -26,7 +26,7 @@ public class LandmarkRestController {
         return landmarkService.getLandmarksByRegion(regionId);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/visited/{id}")
     public void updateLandmark(@PathVariable int id, @RequestBody Landmark landmark) {
         landmarkService.updateLandmark(id, landmark);
     }
