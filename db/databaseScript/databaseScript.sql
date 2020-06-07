@@ -7,7 +7,7 @@ CREATE SCHEMA IF NOT EXISTS `explorebulgaria` DEFAULT CHARACTER SET utf8 ;
 USE `explorebulgaria`;
 
 -- -----------------------------------------------------
--- Table `explorebulgaria`.`areas`
+-- Table `explorebulgaria`.`regions`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `explorebulgaria`.`regions` (
   `id` INT(10) NOT NULL AUTO_INCREMENT,
