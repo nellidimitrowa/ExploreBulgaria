@@ -21,7 +21,7 @@ public class LandmarkRestController {
         return landmarkService.getLandmarkById(landmarkId);
     }
 
-    @GetMapping("/{regionId}")
+    @GetMapping("/region/{regionId}")
     public List<Landmark> getLandmarksByRegionId(@PathVariable int regionId) {
         return landmarkService.getLandmarksByRegion(regionId);
     }
