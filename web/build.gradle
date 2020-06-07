@@ -17,6 +17,10 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+
+    //Hibernate
+    compile group: 'org.hibernate', name: 'hibernate-gradle-plugin', version: '5.4.16.Final'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.11'
 }
 
 test {

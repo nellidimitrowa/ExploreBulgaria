@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `explorebulgaria`.`landmarks` (
   `latitude` DECIMAL(10, 8) NOT NULL,
   `longitude` DECIMAL(11, 8) NOT NULL,
   `region_id` INT(10) NOT NULL,
-  `user_been` TINYINT(1) DEFAULT NULL,
+  `is_visited` TINYINT(1) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `IdLandmark_UNIQUE` (`id` ASC),
   CONSTRAINT `region_id`
@@ -38,4 +38,3 @@ CREATE TABLE IF NOT EXISTS `explorebulgaria`.`landmarks` (
 	REFERENCES `explorebulgaria`.`regions`(`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
-

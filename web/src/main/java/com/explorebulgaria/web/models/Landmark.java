@@ -2,35 +2,56 @@ package com.explorebulgaria.web.models;
 
 import java.math.BigDecimal;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "landmarks")
 public class Landmark {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int landmarkId;
+
+    @Column(name = "landmark_name")
     private String landmarkName;
+
+    @Column(name = "description")
     private String description;
+
+    @Column(name = "picture")
     private String picture;
-    private BigDecimal latitude;
-    private BigDecimal longitude;
+
+    @Column(name = "latitude")
+    private BigDecimal landmarkLatitude;
+
+    @Column(name = "longitude")
+    private BigDecimal landmarkLongitude;
+
+    @Column(name = "region_id")
     private int regionId;
-    private boolean userBeen;
+
+    @Column(name = "is_visited")
+    private boolean isVisited;
 
     public Landmark() { }
 
-    public Landmark(int landmarkId, String landmarkName, String description, String picture, BigDecimal latitude, BigDecimal longitude, int regionId, boolean userBeen) {
+    public Landmark(int landmarkId, String landmarkName, String description, String picture, BigDecimal landmarkLatitude, BigDecimal landmarkLongitude, int regionId, boolean isVisited) {
         this.landmarkId = landmarkId;
         this.landmarkName = landmarkName;
         this.description = description;
         this.picture = picture;
-        this.latitude = latitude;
-        this.longitude = longitude;
+        this.landmarkLatitude = landmarkLatitude;
+        this.landmarkLongitude = landmarkLongitude;
         this.regionId = regionId;
-        this.userBeen = userBeen;
+        this.isVisited = isVisited;
     }
 
-    public int getlandmarkId() {
+    public int getLandmarkId() {
         return landmarkId;
     }
 
-    public void setlandmarkId(int landmarkId) {
+    public void setLandmarkId(int landmarkId) {
         this.landmarkId = landmarkId;
     }
 
@@ -58,20 +79,20 @@ public class Landmark {
         this.picture = picture;
     }
 
-    public BigDecimal getLatitude() {
-        return latitude;
+    public BigDecimal getLandmarkLatitude() {
+        return landmarkLatitude;
     }
 
-    public void setLatitude(BigDecimal latitude) {
-        this.latitude = latitude;
+    public void setLandmarkLatitude(BigDecimal landmarkLatitude) {
+        this.landmarkLatitude = landmarkLatitude;
     }
 
-    public BigDecimal getLongitude() {
-        return longitude;
+    public BigDecimal getLandmarkLongitude() {
+        return landmarkLongitude;
     }
 
-    public void setLongitude(BigDecimal longitude) {
-        this.longitude = longitude;
+    public void setLandmarkLongitude(BigDecimal landmarkLongitude) {
+        this.landmarkLongitude = landmarkLongitude;
     }
 
     public int getRegionId() {
@@ -82,11 +103,11 @@ public class Landmark {
         this.regionId = regionId;
     }
 
-    public boolean isUserBeen() {
-        return userBeen;
+    public boolean getIsVisited() {
+        return isVisited;
     }
 
-    public void setUserBeen(boolean userBeen) {
-        this.userBeen = userBeen;
+    public void setIsVisited(boolean isVisited) {
+        this.isVisited = isVisited;
     }
 }

@@ -2,27 +2,40 @@ package com.explorebulgaria.web.models;
 
 import java.math.BigDecimal;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "regions")
 public class Region {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int regionId;
+
+    @Column(name = "region_name")
     private String regionName;
-    private BigDecimal latitude;
-    private BigDecimal longitude;
+
+    @Column(name = "latitude")
+    private BigDecimal regionLatitude;
+
+    @Column(name = "longitude")
+    private BigDecimal regionLongitude;
 
     public Region() { }
 
-    public Region(int regionId, String regionName, BigDecimal latitude, BigDecimal longitude) {
+    public Region(int regionId, String regionName, BigDecimal regionLatitude, BigDecimal regionLongitude) {
         this.regionId = regionId;
         this.regionName = regionName;
-        this.latitude = latitude;
-        this.longitude = longitude;
+        this.regionLatitude = regionLatitude;
+        this.regionLongitude = regionLongitude;
     }
 
-    public int getregionId() {
+    public int getRegionId() {
         return regionId;
     }
 
-    public void setregionId(int regionId) {
+    public void setRegionId(int regionId) {
         this.regionId = regionId;
     }
 
@@ -34,19 +47,19 @@ public class Region {
         this.regionName = regionName;
     }
 
-    public BigDecimal getLatitude() {
-        return latitude;
+    public BigDecimal getRegionLatitude() {
+        return regionLatitude;
     }
 
-    public void setLatitude(BigDecimal latitude) {
-        this.latitude = latitude;
+    public void setRegionLatitude(BigDecimal regionLatitude) {
+        this.regionLatitude = regionLatitude;
     }
 
-    public BigDecimal getLongitude() {
-        return longitude;
+    public BigDecimal getRegionLongitude() {
+        return regionLongitude;
     }
 
-    public void setLongitude(BigDecimal longitude) {
-        this.longitude = longitude;
+    public void setRegionLongitude(BigDecimal regionLongitude) {
+        this.regionLongitude = regionLongitude;
     }
 }
