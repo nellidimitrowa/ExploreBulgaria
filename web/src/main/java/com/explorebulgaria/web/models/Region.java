@@ -1,6 +1,10 @@
 package com.explorebulgaria.web.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.*;
 
@@ -21,6 +25,10 @@ public class Region {
 
     @Column(name = "longitude")
     private BigDecimal regionLongitude;
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
+    private List<Landmark> landmarks = new ArrayList<>();
 
     public Region() { }
 
@@ -62,4 +70,8 @@ public class Region {
     public void setRegionLongitude(BigDecimal regionLongitude) {
         this.regionLongitude = regionLongitude;
     }
+
+    public List<Landmark> getLandmarks() { return landmarks; }
+
+    public void setLandmarks(List<Landmark> landmarks) { this.landmarks = landmarks; }
 }
