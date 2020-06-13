@@ -29,6 +29,8 @@ CREATE TABLE IF NOT EXISTS `explorebulgaria`.`landmarks` (
   `picture` LONGTEXT NOT NULL,
   `latitude` DECIMAL(10, 8) NOT NULL,
   `longitude` DECIMAL(11, 8) NOT NULL,
+  `work_time`VARCHAR(45) NOT NULL,
+  `entrance_fee` VARCHAR(45) NOT NULL,
   `region_id` INT(10) NOT NULL,
   `is_visited` TINYINT(1) DEFAULT NULL,
   PRIMARY KEY (`id`),

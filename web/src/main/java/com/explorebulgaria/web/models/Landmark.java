@@ -28,6 +28,12 @@ public class Landmark {
     @Column(name = "longitude")
     private BigDecimal landmarkLongitude;
 
+    @Column(name = "work_time")
+    private String workTime;
+
+    @Column(name = "entrance_fee")
+    private String entranceFee;
+
     @Column(name = "region_id")
     private int regionId;
 
@@ -36,13 +42,15 @@ public class Landmark {
 
     public Landmark() { }
 
-    public Landmark(int landmarkId, String landmarkName, String description, String picture, BigDecimal landmarkLatitude, BigDecimal landmarkLongitude, int regionId, boolean isVisited) {
+    public Landmark(int landmarkId, String landmarkName, String description, String picture, BigDecimal landmarkLatitude, BigDecimal landmarkLongitude, String workTime, String entranceFee, int regionId, boolean isVisited) {
         this.landmarkId = landmarkId;
         this.landmarkName = landmarkName;
         this.description = description;
         this.picture = picture;
         this.landmarkLatitude = landmarkLatitude;
         this.landmarkLongitude = landmarkLongitude;
+        this.workTime = workTime;
+        this.entranceFee = entranceFee;
         this.regionId = regionId;
         this.isVisited = isVisited;
     }
@@ -94,6 +102,14 @@ public class Landmark {
     public void setLandmarkLongitude(BigDecimal landmarkLongitude) {
         this.landmarkLongitude = landmarkLongitude;
     }
+
+    public String getWorkTime() { return workTime; }
+
+    public void setWorkTime(String workTime) { this.workTime = workTime; }
+
+    public String getEntranceFee() { return entranceFee; }
+
+    public void setEntranceFee(String entranceFee) { this.entranceFee = entranceFee; }
 
     public int getRegionId() {
         return regionId;
