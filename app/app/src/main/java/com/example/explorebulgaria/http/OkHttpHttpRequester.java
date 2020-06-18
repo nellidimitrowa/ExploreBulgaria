@@ -28,7 +28,7 @@ public class OkHttpHttpRequester implements HttpRequester {
     }
 
     @Override
-    public String post(String url, String bodyString) throws IOException {
+    public String put(String url, String bodyString) throws IOException {
         RequestBody body = RequestBody.create(MediaType.parse("application/json"), bodyString);
 
         Request request = new Request.Builder()
