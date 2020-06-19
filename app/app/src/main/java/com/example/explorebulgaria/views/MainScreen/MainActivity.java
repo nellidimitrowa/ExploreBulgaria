@@ -1,8 +1,10 @@
-package com.example.explorebulgaria;
+package com.example.explorebulgaria.views.MainScreen;
+
+import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
+import com.example.explorebulgaria.R;
 
 public class MainActivity extends AppCompatActivity {
 

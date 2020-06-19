@@ -1,6 +1,6 @@
 package com.example.explorebulgaria.diconfig;
 
-import com.example.explorebulgaria.MainActivity;
+import com.example.explorebulgaria.views.MainScreen.MainActivity;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
