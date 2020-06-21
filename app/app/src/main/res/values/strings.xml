@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">ExploreBulgaria</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="blagoevgrad">Благоевград</string>
+    <string name="burgas">Бургас</string>
+    <string name="varna">Варна</string>
+    <string name="veliko_tarnovo">Велико&#10;Търново</string>
+    <string name="vidin">Видин</string>
+    <string name="vraca">Враца</string>
+    <string name="gabrovo">Габрово</string>
+    <string name="dobrich">Добрич</string>
+    <string name="kardjali">Кърджали</string>
+    <string name="kiustendil">Кюстендил</string>
+    <string name="lovech">Ловеч</string>
+    <string name="montana">Монтана</string>
+    <string name="pazardjik">Пазарджик</string>
+    <string name="pernik">Перник</string>
+    <string name="pleven">Плевен</string>
+    <string name="plovdiv">Пловдив</string>
+    <string name="razgrad">Разград</string>
+    <string name="ruse">Русе</string>
+    <string name="silistra">Силистра</string>
+    <string name="sliven">Сливен</string>
+    <string name="smolyan">Смолян</string>
+    <string name="sofiya">София</string>
+    <string name="sofiya_oblast">София&#10;област</string>
+    <string name="stara_zagora">Стара Загора</string>
+    <string name="targovishte">Търговище</string>
+    <string name="haskovo">Хасково</string>
+    <string name="shumen">Шумен</string>
+    <string name="yambol">Ямбол</string>
 </resources>

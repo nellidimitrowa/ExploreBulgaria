@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/buttonMapFragmentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.MainScreen.ButtonMapFragment"
+    android:background="@color/map_background">
+
+    <Button
+        android:id="@+id/btn_lovech"
+        android:layout_width="63.3dp"
+        android:layout_height="50.5dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="71dp"
+        android:background="@drawable/lovech_selector"
+        android:text="@string/lovech"
+        android:textSize="7sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_vidin"
+        android:layout_width="38dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/vidin_selector"
+        android:text="@string/vidin"
+        android:textSize="6sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_montana"
+        android:layout_width="47dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/montana_selector"
+        android:text="@string/montana"
+        android:textSize="5sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btv_vraca"
+        android:layout_width="55dp"
+        android:layout_height="62.7dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="37dp"
+        android:background="@drawable/vraca_selector"
+        android:text="@string/vraca"
+        android:textSize="7sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_pleven"
+        android:layout_width="71dp"
+        android:layout_height="42.3dp"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/pleven_selector"
+        android:text="@string/pleven"
+        android:textSize="7sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_sofiya_oblast"
+        android:layout_width="97.2dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="85dp"
+        android:background="@drawable/sofiya_sofiya_oblast_selector"
+        android:gravity="center"
+        android:text="@string/sofiya"
+        android:textSize="7sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_gabrovo"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/gabrovo_selector"
+        android:text="@string/gabrovo"
+        android:textSize="6sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_veliko_tarnovo"
+        android:layout_width="63dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="49dp"
+        android:background="@drawable/veliko_tarnovo_selector"
+        android:text="@string/veliko_tarnovo"
+        android:textSize="6sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_pernik"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/pernik_selector"
+        android:text="@string/pernik"
+        android:textSize="6sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_kustendil"
+        android:layout_width="63dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="127dp"
+        android:background="@drawable/kustendil_selector"
+        android:text="@string/kiustendil"
+        android:textSize="5sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_blagoevgrad"
+        android:layout_width="72dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="163dp"
+        android:background="@drawable/blagoevgrad_selector"
+        android:text="@string/blagoevgrad"
+        android:textSize="6sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_pazardjik"
+        android:layout_width="43dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="128dp"
+        android:background="@drawable/pazardjik_selector"
+        android:text="@string/pazardjik"
+        android:textSize="5sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_plovdiv"
+        android:layout_width="56dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="116dp"
+        android:background="@drawable/plovdiv_selector"
+        android:text="@string/plovdiv"
+        android:textSize="5sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_smolyan"
+        android:layout_width="63dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/smolyan_selector"
+        android:text="@string/smolyan"
+        android:textSize="6sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_stara_zagora"
+        android:layout_width="68dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="153dp"
+        android:layout_marginTop="115dp"
+        android:background="@drawable/stara_zagora_selector"
+        android:text="@string/stara_zagora"
+        android:textSize="5sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_kardjali"
+        android:layout_width="54dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="153dp"
+        android:layout_marginTop="182dp"
+        android:background="@drawable/kardjali_selector"
+        android:text="@string/kardjali"
+        android:textSize="5sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_ruse"
+        android:layout_width="59dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="178dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ruse_selector"
+        android:text="@string/ruse"
+        android:textSize="6sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_razgrad"
+        android:layout_width="54dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="211dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/razgrad_selector"
+        android:text="@string/razgrad"
+        android:textSize="6sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_targovishte"
+        android:layout_width="47dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="205dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/targovishte_selector"
+        android:text="@string/targovishte"
+        android:textSize="5sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_sliven"
+        android:layout_width="48dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="96dp"
+        android:background="@drawable/sliven_selector"
+        android:text="@string/sliven"
+        android:textSize="7sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_haskovo"
+        android:layout_width="77dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="166dp"
+        android:layout_marginTop="159dp"
+        android:background="@drawable/haskovo_selector"
+        android:text="@string/haskovo"
+        android:textSize="7sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_yambol"
+        android:layout_width="48dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="221dp"
+        android:layout_marginTop="119dp"
+        android:background="@drawable/yambol_selector"
+        android:text="@string/yambol"
+        android:textSize="7sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_burgas"
+        android:layout_width="84dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="241dp"
+        android:layout_marginTop="98dp"
+        android:background="@drawable/burgas_selector"
+        android:text="@string/burgas"
+        android:textSize="7sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_shumen"
+        android:layout_width="48dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/shumen_selector"
+        android:text="@string/shumen"
+        android:textSize="6sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_varna"
+        android:layout_width="55dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="270dp"
+        android:layout_marginTop="51dp"
+        android:background="@drawable/varna_selector"
+        android:text="@string/varna"
+        android:textSize="7sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_silistra"
+        android:layout_width="77dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="226dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/silistra_selector"
+        android:text="@string/silistra"
+        android:textSize="7sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_dobrich"
+        android:layout_width="79dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="275dp"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/dobrich_selector"
+        android:text="@string/dobrich"
+        android:textSize="7sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
