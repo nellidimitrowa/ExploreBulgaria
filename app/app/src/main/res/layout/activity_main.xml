@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.6"
-        android:background="@color/md_red_A100"
+        android:background="@color/darkBlue"
         android:orientation="vertical"></LinearLayout>
 
 </LinearLayout>

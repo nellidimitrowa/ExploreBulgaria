@@ -2,7 +2,20 @@ package com.example.explorebulgaria;
 
 public class Constants {
 
-    public static final String BASE_SERVER_URL = "192.168.231.2:8080/api";
+    //public static final String BASE_SERVER_URL = "https://192.168.231.2:8080/api";
+    //public static final String BASE_SERVER_URL = "https://192.168.0.103:8080/api";
+
+    //Sofia
+    public static final String BASE_SERVER_URL = "http://192.168.0.101:8080/api";
+
+    //Huawei Hotspot
+    //public static final String BASE_SERVER_URL = "http://192.168.43.175:8080/api";
+
+    //Xiaomi
+    //public static final String BASE_SERVER_URL = "https://192.168.0.102:5565/api";
+
+    //Huawei N
+    //public static final String BASE_SERVER_URL = "https://192.168.0.101:8080/api";
 
     public static final int BLAGOEVGRAD_ID = 1;
     public static final int BURGAS_ID = 2;

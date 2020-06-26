@@ -5,10 +5,16 @@
     android:layout_height="match_parent"
     tools:context=".views.MainScreen.LandmarksListFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
+    <RelativeLayout
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="match_parent">
+        
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_landmarks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#055179"
+            android:padding="4dp"/>
+    </RelativeLayout>
 
 </FrameLayout>
