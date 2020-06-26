@@ -25,7 +25,7 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `explorebulgaria`.`landmarks` (
   `id` INT(10) NOT NULL AUTO_INCREMENT,
   `landmark_name` VARCHAR(45) NOT NULL,
-  `description` VARCHAR(500) NOT NULL,
+  `description` LONGTEXT NOT NULL,
   `picture` LONGTEXT NOT NULL,
   `latitude` DECIMAL(10, 8) NOT NULL,
   `longitude` DECIMAL(11, 8) NOT NULL,
