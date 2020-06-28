@@ -17,12 +17,6 @@ public class MainActivity extends DaggerAppCompatActivity {
     @Inject
     ButtonMapContracts.Presenter mButtonMapPresenter;
 
-    @Inject
-    LandmarksListFragment mLandmarksListFragment;
-
-    @Inject
-    LandmarksListContracts.Presenter mLandmarksListPresenter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,16 +25,10 @@ public class MainActivity extends DaggerAppCompatActivity {
         ButterKnife.bind(this);
 
         mButtonMapFragment.setPresenter(mButtonMapPresenter);
-        mLandmarksListFragment.setPresenter(mLandmarksListPresenter);
 
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.buttonMapLayout, mButtonMapFragment)
-                .commit();
-
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.landmarksLayout, mLandmarksListFragment)
                 .commit();
     }
 }
