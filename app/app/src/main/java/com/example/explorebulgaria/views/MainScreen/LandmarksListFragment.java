@@ -75,7 +75,7 @@ public class LandmarksListFragment extends DaggerFragment implements LandmarksLi
     @Override
     public void showEmptyList() {
         Toast.makeText(getContext(),
-                "NO LANDMARKS TO SHOW",
+                "Изберете регион",
                 Toast.LENGTH_LONG)
                 .show();
     }

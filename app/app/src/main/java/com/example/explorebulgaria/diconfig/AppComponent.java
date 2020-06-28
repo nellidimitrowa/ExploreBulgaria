@@ -20,6 +20,7 @@ import dagger.android.support.AndroidSupportInjectionModule;
         ParserModule.class,
         RepositoryModule.class,
         MainScreenModule.class,
+        MainScreenPresenterModule.class,
         ServicesModule.class,
         AsyncModule.class
 })

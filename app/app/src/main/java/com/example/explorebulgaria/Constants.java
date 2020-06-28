@@ -17,6 +17,7 @@ public class Constants {
     //Huawei N
     //public static final String BASE_SERVER_URL = "https://192.168.0.101:8080/api";
 
+    public static int REGION_ID = 0;
     public static final int BLAGOEVGRAD_ID = 1;
     public static final int BURGAS_ID = 2;
     public static final int VARNA_ID = 3;

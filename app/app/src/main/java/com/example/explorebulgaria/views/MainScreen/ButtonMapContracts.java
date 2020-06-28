@@ -11,6 +11,8 @@ public interface ButtonMapContracts {
         void setPresenter(Presenter presenter);
 
         void showLandmarks(List<Landmark> landmarks);
+
+        void showError(Throwable e);
     }
 
     interface Presenter {

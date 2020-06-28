@@ -33,7 +33,7 @@ public class LandmarksListPresenter implements LandmarksListContracts.Presenter 
     @Override
     public void loadLandmarks() {
         Disposable observable = Observable.create((ObservableOnSubscribe<List<Landmark>>) emitter -> {
-            List<Landmark> landmarks = mLandmarkService.getLandmarksByRegionId(Constants.BLAGOEVGRAD_ID);
+            List<Landmark> landmarks = mLandmarkService.getLandmarksByRegionId(Constants.REGION_ID);
             emitter.onNext(landmarks);
             emitter.onComplete();
         })
@@ -41,14 +41,6 @@ public class LandmarksListPresenter implements LandmarksListContracts.Presenter 
                 .observeOn(mSchedulerProvider.ui())
                 .doOnError(error -> mView.showError(error))
                 .subscribe(this::presentLandmarksToView);
-
-//        .subscribeOn(mSchedulerProvider.background())
-//                .observeOn(mSchedulerProvider.ui())
-//                .doFinally(mView::hideLoading)
-//                .subscribe(
-//                        this::presentUserToView,
-//                        error -> mView.showError(error)
-//                );
     }
 
     private void presentLandmarksToView(List<Landmark> landmarks) {
