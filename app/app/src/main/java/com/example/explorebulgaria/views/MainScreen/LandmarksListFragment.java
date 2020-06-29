@@ -1,5 +1,6 @@
 package com.example.explorebulgaria.views.MainScreen;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.explorebulgaria.R;
 import com.example.explorebulgaria.models.Landmark;
+import com.example.explorebulgaria.views.LandmarkDetailsScreen.LandmarkDetailsActivity;
 
 import java.util.List;
 
@@ -88,7 +90,16 @@ public class LandmarksListFragment extends DaggerFragment implements LandmarksLi
 
     @Override
     public void showLandmarkDetails(Landmark landmark) {
-        //intent kum sledvashtoto activity
+        //Constants.TEST_RESIDENCE_ID = residence.getResidenceId();
+        Intent intent = new Intent(getContext(), LandmarkDetailsActivity.class);
+        intent.putExtra("landmarkId", landmark.getLandmarkId());
+        intent.putExtra("landmarkName", landmark.getLandmarkName());
+        intent.putExtra("picture", landmark.getPicture());
+        intent.putExtra("description", landmark.getDescription());
+        intent.putExtra("workTime", landmark.getWorkTime());
+        intent.putExtra("entranceFee", landmark.getEntranceFee());
+
+        startActivity(intent);
     }
 
     @Override

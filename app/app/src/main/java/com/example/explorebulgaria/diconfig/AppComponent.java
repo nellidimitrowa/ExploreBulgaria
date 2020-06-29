@@ -18,12 +18,14 @@ import dagger.android.support.AndroidSupportInjectionModule;
         AndroidSupportInjectionModule.class,
         HttpModule.class,
         ParserModule.class,
+        ServicesModule.class,
+        AsyncModule.class,
         RepositoryModule.class,
         MainScreenModule.class,
         MainScreenPresenterModule.class,
         LandmarksListViewModule.class,
-        ServicesModule.class,
-        AsyncModule.class
+        LandmarkDetailsScreenModule.class,
+        LandmarkDetailsScreenPresenterModule.class
 })
 
 public interface AppComponent extends AndroidInjector<AndroidApplication> {
