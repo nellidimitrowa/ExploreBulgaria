@@ -83,6 +83,7 @@ public class LandmarksListAdapter extends RecyclerView.Adapter<LandmarksListAdap
 
         private OnLandmarkListClickListener mOnClickListener;
         private Landmark mLandmark;
+        private LandmarksListContracts.Presenter mPresenter;
 
         public LandmarksListViewHolder(@NonNull View view) {
             super(view);
@@ -110,6 +111,11 @@ public class LandmarksListAdapter extends RecyclerView.Adapter<LandmarksListAdap
 
         public void setOnClickListener(OnLandmarkListClickListener onClickListener) {
             mOnClickListener = onClickListener;
+        }
+
+        @OnClick({R.id.cb_visited})
+        public void mLandmarkVisitedCheckBoxOnClick(View view) {
+            mPresenter.changeLandmarkToVisited(mLandmark.getLandmarkId(), mLandmark);
         }
     }
 

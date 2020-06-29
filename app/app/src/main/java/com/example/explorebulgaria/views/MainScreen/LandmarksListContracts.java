@@ -28,5 +28,7 @@ public interface LandmarksListContracts {
 
         void selectLandmark(Landmark landmark);
 
+        void changeLandmarkToVisited(int landmarkId, Landmark landmark);
+
     }
 }

@@ -21,6 +21,7 @@ import dagger.android.support.AndroidSupportInjectionModule;
         RepositoryModule.class,
         MainScreenModule.class,
         MainScreenPresenterModule.class,
+        LandmarksListViewModule.class,
         ServicesModule.class,
         AsyncModule.class
 })

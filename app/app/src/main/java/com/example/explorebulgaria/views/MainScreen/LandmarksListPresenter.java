@@ -5,6 +5,7 @@ import com.example.explorebulgaria.async.base.SchedulerProvider;
 import com.example.explorebulgaria.models.Landmark;
 import com.example.explorebulgaria.services.landmark.base.LandmarkService;
 
+import java.io.IOException;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -55,4 +56,16 @@ public class LandmarksListPresenter implements LandmarksListContracts.Presenter 
     public void selectLandmark(Landmark landmark) {
         mView.showLandmarkDetails(landmark);
     }
+
+    @Override
+    public void changeLandmarkToVisited(int landmarkId, Landmark landmark) {
+        try {
+            mLandmarkService.updateLandmark(landmarkId, landmark);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
 }
