@@ -2,6 +2,7 @@ package com.example.explorebulgaria.views.MainScreen;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.StrictMode;
 import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,10 +14,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.explorebulgaria.Constants;
 import com.example.explorebulgaria.R;
+import com.example.explorebulgaria.http.OkHttpHttpRequester;
 import com.example.explorebulgaria.models.Landmark;
 
 import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -115,7 +119,27 @@ public class LandmarksListAdapter extends RecyclerView.Adapter<LandmarksListAdap
 
         @OnClick({R.id.cb_visited})
         public void mLandmarkVisitedCheckBoxOnClick(View view) {
-            mPresenter.changeLandmarkToVisited(mLandmark.getLandmarkId(), mLandmark);
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            OkHttpHttpRequester okHttpHttpRequester = new OkHttpHttpRequester();
+            String body;
+            if(mLandmarkVisitedCheckBox.isChecked()) {
+                body = "{ \n" +
+                        "    \"isVisited\": true\n" +
+                        "}";
+
+            } else {
+                body = "{ \n" +
+                        "    \"isVisited\": false\n" +
+                        "}";
+            }
+            try {
+                okHttpHttpRequester.put( Constants.BASE_SERVER_URL + "/landmarks/visited/" + mLandmark.getLandmarkId(),
+                        body);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            //mPresenter.changeLandmarkToVisited(mLandmark.getLandmarkId(), mLandmark);
         }
     }
 

@@ -32,7 +32,7 @@ public class OkHttpHttpRequester implements HttpRequester {
         RequestBody body = RequestBody.create(MediaType.parse("application/json"), bodyString);
 
         Request request = new Request.Builder()
-                .post(body)
+                .put(body)
                 .url(url)
                 .build();
         OkHttpClient client = new OkHttpClient();
