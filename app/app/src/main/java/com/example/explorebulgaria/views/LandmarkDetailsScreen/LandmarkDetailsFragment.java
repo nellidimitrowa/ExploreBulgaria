@@ -3,11 +3,13 @@ package com.example.explorebulgaria.views.LandmarkDetailsScreen;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +27,7 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -46,11 +49,16 @@ public class LandmarkDetailsFragment extends Fragment implements LandmarkDetails
     @BindView(R.id.tv_entrance_fee)
     TextView mLandmarkEntranceFee;
 
+    @BindView(R.id.btn_navigation)
+    Button mNavigationButton;
+
     @Inject
     LandmarkDetailsContracts.Presenter mPresenter;
 
     private LinearLayoutManager mLayoutManager;
     private int mLandmarkId;
+    private String mLongitude;
+    private String mLatitude;
 
     @Inject
     public LandmarkDetailsFragment() {
@@ -77,6 +85,8 @@ public class LandmarkDetailsFragment extends Fragment implements LandmarkDetails
         mLandmarkWorkTime.setText(landmarkWorkTime);
         String landmarkEntranceFee = intent.getStringExtra("entranceFee");
         mLandmarkEntranceFee.setText(landmarkEntranceFee);
+        mLatitude = intent.getStringExtra("latitude");
+        mLongitude = intent.getStringExtra("longitude");
 
         return view;
     }
@@ -95,7 +105,7 @@ public class LandmarkDetailsFragment extends Fragment implements LandmarkDetails
     @Override
     public void showEmptyList() {
         Toast.makeText(getContext(),
-                "Не е намерена информация за дадената забележителност",
+                "Не е намерена информация за избраната забележителност",
                 Toast.LENGTH_LONG)
                 .show();
     }
@@ -109,6 +119,14 @@ public class LandmarkDetailsFragment extends Fragment implements LandmarkDetails
     @Override
     public void showLandmark(Landmark landmark) {
 
+    }
+
+    @OnClick({R.id.btn_navigation})
+    public void mNavigationButtonOnClick() {
+        Uri gmmIntentUri = Uri.parse("google.navigation:q= "+ mLatitude + "," + mLongitude +"");
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+        mapIntent.setPackage("com.google.android.apps.maps");
+        startActivity(mapIntent);
     }
 
 

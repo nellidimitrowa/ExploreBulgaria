@@ -98,6 +98,8 @@ public class LandmarksListFragment extends DaggerFragment implements LandmarksLi
         intent.putExtra("description", landmark.getDescription());
         intent.putExtra("workTime", landmark.getWorkTime());
         intent.putExtra("entranceFee", landmark.getEntranceFee());
+        intent.putExtra("latitude", landmark.getLandmarkLatitude().toString());
+        intent.putExtra("longitude", landmark.getLandmarkLongitude().toString());
 
         startActivity(intent);
     }
