@@ -24,6 +24,8 @@ public class MainActivity extends DaggerAppCompatActivity {
 
         ButterKnife.bind(this);
 
+        this.setTitle("Опознай България");
+
         mButtonMapFragment.setPresenter(mButtonMapPresenter);
 
         getSupportFragmentManager()

@@ -304,135 +304,162 @@ public class ButtonMapFragment extends Fragment implements ButtonMapContracts.Vi
     @OnClick({R.id.btn_blagoevgrad})
     public void mBlagoevgradButtonClick() {
         setSelectedRegion(Constants.BLAGOEVGRAD_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Благоевград");
     }
 
     @OnClick({R.id.btn_burgas})
     public void mBurgasButtonClick() {
         setSelectedRegion(Constants.BURGAS_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Бургас");
     }
 
     @OnClick({R.id.btn_varna})
     public void mVarnaButtonClick() {
         setSelectedRegion(Constants.VARNA_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Варна");
     }
 
     @OnClick({R.id.btn_veliko_tarnovo})
     public void mVelikoTarnovoButtonOnClick() {
         setSelectedRegion(Constants.VELIKO_TARNOVO_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Велико Търново");
     }
 
     @OnClick({R.id.btn_vidin})
     public void mVidinButtonOnClick() {
         setSelectedRegion(Constants.VIDIN_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Видин");
     }
 
     @OnClick({R.id.btv_vraca})
     public void mVracaButtonOnClick() {
         setSelectedRegion(Constants.VRACA_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Враца");
     }
 
     @OnClick({R.id.btn_gabrovo})
     public void mGabrovoButtonOnClick() {
         setSelectedRegion(Constants.GABROVO_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Габрово");
     }
 
     @OnClick({R.id.btn_dobrich})
     public void mDobrichButtonOnClick() {
         setSelectedRegion(Constants.DOBRICH_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Добрич");
     }
 
     @OnClick({R.id.btn_kardjali})
     public void mKardjaliButtonOnClick() {
         setSelectedRegion(Constants.KARDJALI_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Кърджали");
     }
 
     @OnClick({R.id.btn_kustendil})
     public void mKustendilButtonOnClick() {
         setSelectedRegion(Constants.KUSTENDIL_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Кюстендил");
     }
 
     @OnClick({R.id.btn_lovech})
     public void mLovechButtonOnClick() {
         setSelectedRegion(Constants.LOVECH_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Ловеч");
     }
 
     @OnClick({R.id.btn_montana})
     public void mMontanaButtonOnClick() {
         setSelectedRegion(Constants.MONTANA_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Монтана");
     }
 
     @OnClick({R.id.btn_pazardjik})
     public void mPazardjikButtonOnClick() {
         setSelectedRegion(Constants.PAZARDJIK_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Пазарджик");
     }
 
     @OnClick({R.id.btn_pernik})
     public void mPerniksButtonOnClick() {
         setSelectedRegion(Constants.PERNIK_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Перник");
     }
 
     @OnClick({R.id.btn_pleven})
     public void mPlevenButtonOnClick() {
         setSelectedRegion(Constants.PLEVEN_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Плевен");
     }
 
     @OnClick({R.id.btn_plovdiv})
     public void mPlovdivButtonOnClick() {
         setSelectedRegion(Constants.PLOVDIV_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Пловдив");
     }
 
     @OnClick({R.id.btn_razgrad})
     public void mRazgradButtonOnClick() {
         setSelectedRegion(Constants.RAZGRAD_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Разград");
     }
 
     @OnClick({R.id.btn_ruse})
     public void mRuseButtonOnClick() {
         setSelectedRegion(Constants.RUSE_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Русе");
     }
 
     @OnClick({R.id.btn_silistra})
     public void mSilistraButtonOnClick() {
         setSelectedRegion(Constants.SILISTRA_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Силистра");
     }
 
     @OnClick({R.id.btn_sliven})
     public void mSlivenButtonOnClick() {
         setSelectedRegion(Constants.SLIVEN_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Сливен");
     }
 
     @OnClick({R.id.btn_smolyan})
     public void mSmolyanButtonOnClick() {
         setSelectedRegion(Constants.SMOLYAN_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Смолян");
     }
 
     @OnClick({R.id.btn_sofiya_oblast})
     public void mSofiyaButtonOnClick() {
         setSelectedRegion(Constants.SOFIYA_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област София");
     }
 
     @OnClick({R.id.btn_stara_zagora})
     public void mStaraZagoraButtonOnClick() {
         setSelectedRegion(Constants.STARA_ZAGORA_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Стара Загора");
     }
 
     @OnClick({R.id.btn_targovishte})
     public void mTargovishteButtonOnClick() {
         setSelectedRegion(Constants.TARGOVISHTE_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Търговище");
     }
 
     @OnClick({R.id.btn_haskovo})
     public void mHaskovoButtonOnClick() {
         setSelectedRegion(Constants.HASKOVO_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Хасково");
     }
 
     @OnClick({R.id.btn_shumen})
     public void mShumenButtonOnClick() {
         setSelectedRegion(Constants.SHUMEN_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Шумен");
     }
 
     @OnClick({R.id.btn_yambol})
     public void mYambolButtonOnClick() {
         setSelectedRegion(Constants.YAMBOL_ID);
+        ((MainActivity)getActivity()).setTitle("Опознай България - област Ямбол");
     }
 }
