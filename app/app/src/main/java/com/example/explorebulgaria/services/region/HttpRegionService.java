@@ -18,4 +18,14 @@ public class HttpRegionService implements RegionService {
     public Region getRegionById(int regionId) throws IOException {
         return repository.getRegionById(regionId);
     }
+
+    @Override
+    public void updateRegion(int regionId, Region region) throws IOException {
+        repository.updateRegion(regionId, region);
+    }
+
+    @Override
+    public boolean isRegionVisited(int regionId) throws IOException {
+        return repository.isRegionVisited(regionId);
+    }
 }

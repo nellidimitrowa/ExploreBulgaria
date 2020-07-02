@@ -5,7 +5,6 @@ import com.example.explorebulgaria.async.base.SchedulerProvider;
 import com.example.explorebulgaria.models.Landmark;
 import com.example.explorebulgaria.services.landmark.base.LandmarkService;
 
-import java.io.IOException;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -19,6 +18,7 @@ public class LandmarksListPresenter implements LandmarksListContracts.Presenter 
     private final LandmarkService mLandmarkService;
     private final SchedulerProvider mSchedulerProvider;
     private LandmarksListContracts.View mView;
+    private ButtonMapContracts.View mButtonMapView;
 
     @Inject
     LandmarksListPresenter(LandmarkService mLandmarkService, SchedulerProvider schedulerProvider) {
@@ -33,6 +33,7 @@ public class LandmarksListPresenter implements LandmarksListContracts.Presenter 
 
     @Override
     public void loadLandmarks() {
+        mView.showLoading();
         Disposable observable = Observable.create((ObservableOnSubscribe<List<Landmark>>) emitter -> {
             List<Landmark> landmarks = mLandmarkService.getLandmarksByRegionId(Constants.REGION_ID);
             emitter.onNext(landmarks);
@@ -41,6 +42,7 @@ public class LandmarksListPresenter implements LandmarksListContracts.Presenter 
                 .subscribeOn(mSchedulerProvider.background())
                 .observeOn(mSchedulerProvider.ui())
                 .doOnError(error -> mView.showError(error))
+                .doFinally(mView::hideLoading)
                 .subscribe(this::presentLandmarksToView);
     }
 
@@ -58,14 +60,17 @@ public class LandmarksListPresenter implements LandmarksListContracts.Presenter 
     }
 
     @Override
-    public void changeLandmarkToVisited(int landmarkId, Landmark landmark) {
-        try {
+    public void changeLandmarkToVisited(Landmark landmark, int landmarkId) {
+        Disposable observable = Observable.create((ObservableOnSubscribe<List<Landmark>>) emitter -> {
             mLandmarkService.updateLandmark(landmarkId, landmark);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+            List<Landmark> landmarks = mLandmarkService.getLandmarksByRegionId(landmark.getRegionId());
+            emitter.onNext(landmarks);
+            emitter.onComplete();
+        })
+                .subscribeOn(mSchedulerProvider.background())
+                .observeOn(mSchedulerProvider.ui())
+                .doOnError(error -> mView.showError(error))
+                .doFinally(mView::hideLoading)
+                .subscribe(mView::changeRegionBackground);
     }
-
-
 }

@@ -8,4 +8,8 @@ public interface RegionRepository {
 
     Region getRegionById(int regionId) throws IOException;
 
+    void updateRegion(int regionId, Region region) throws IOException;
+
+    boolean isRegionVisited(int regionId) throws IOException;
+
 }

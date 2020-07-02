@@ -14,13 +14,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.explorebulgaria.Constants;
 import com.example.explorebulgaria.R;
-import com.example.explorebulgaria.http.OkHttpHttpRequester;
 import com.example.explorebulgaria.models.Landmark;
 
 import java.io.ByteArrayInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +32,7 @@ public class LandmarksListAdapter extends RecyclerView.Adapter<LandmarksListAdap
 
     private List<Landmark> mLandmarks;
     private OnLandmarkListClickListener mOnLandmarkListClickListener;
+    private OnCheckBoxItemClickListener mOnCheckBoxItemClickListener;
 
     @Inject
     public LandmarksListAdapter() {
@@ -52,6 +50,7 @@ public class LandmarksListAdapter extends RecyclerView.Adapter<LandmarksListAdap
     @Override
     public void onBindViewHolder(@NonNull LandmarksListViewHolder holder, int position) {
         holder.setOnClickListener(mOnLandmarkListClickListener);
+        holder.setOnCheckBoxItemClickListener(mOnCheckBoxItemClickListener);
         holder.bind(mLandmarks.get(position));
     }
 
@@ -74,6 +73,10 @@ public class LandmarksListAdapter extends RecyclerView.Adapter<LandmarksListAdap
         this.mOnLandmarkListClickListener = onLandmarkListClickListener;
     }
 
+    public void setOnLandmarkCheckBoxClickListener(OnCheckBoxItemClickListener onLandmarkCheckBoxClickListener) {
+        this.mOnCheckBoxItemClickListener = onLandmarkCheckBoxClickListener;
+    }
+
     public static class LandmarksListViewHolder extends RecyclerView.ViewHolder {
 
         @BindView(R.id.iv_landmark)
@@ -86,6 +89,7 @@ public class LandmarksListAdapter extends RecyclerView.Adapter<LandmarksListAdap
         CheckBox mLandmarkVisitedCheckBox;
 
         private OnLandmarkListClickListener mOnClickListener;
+        private OnCheckBoxItemClickListener mOnCheckBoxItemClickListener;
         private Landmark mLandmark;
         private LandmarksListContracts.Presenter mPresenter;
 
@@ -117,33 +121,27 @@ public class LandmarksListAdapter extends RecyclerView.Adapter<LandmarksListAdap
             mOnClickListener = onClickListener;
         }
 
+        public void setOnCheckBoxItemClickListener(OnCheckBoxItemClickListener onCheckBoxItemClickListener) {
+            mOnCheckBoxItemClickListener = onCheckBoxItemClickListener;
+        }
+
         @OnClick({R.id.cb_visited})
-        public void mLandmarkVisitedCheckBoxOnClick(View view) {
+        public void onItemClick() {
+            if(mLandmarkVisitedCheckBox.isChecked()) {
+                mLandmark.setVisited(true);
+            } else {
+                mLandmark.setVisited(false);
+            }
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
-            OkHttpHttpRequester okHttpHttpRequester = new OkHttpHttpRequester();
-            String body;
-            if(mLandmarkVisitedCheckBox.isChecked()) {
-                body = "{ \n" +
-                        "    \"isVisited\": true\n" +
-                        "}";
-
-            } else {
-                body = "{ \n" +
-                        "    \"isVisited\": false\n" +
-                        "}";
-            }
-            try {
-                okHttpHttpRequester.put( Constants.BASE_SERVER_URL + "/landmarks/visited/" + mLandmark.getLandmarkId(),
-                        body);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            //mPresenter.changeLandmarkToVisited(mLandmark.getLandmarkId(), mLandmark);
-        }
+            mOnCheckBoxItemClickListener.onItemClick(mLandmark);}
     }
 
     interface OnLandmarkListClickListener {
         void onClick(Landmark landmark);
+    }
+
+    interface OnCheckBoxItemClickListener {
+        void onItemClick(Landmark landmark);
     }
 }

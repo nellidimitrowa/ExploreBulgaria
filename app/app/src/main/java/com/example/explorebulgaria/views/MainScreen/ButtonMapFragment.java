@@ -86,6 +86,8 @@ public class ButtonMapFragment extends Fragment implements ButtonMapContracts.Vi
     @Inject
     LandmarksListContracts.Presenter mLandmarksListPresenter;
 
+    public boolean isRegionVisited;
+
     @Inject
     public ButtonMapFragment() {
         // Required empty public constructor
@@ -106,6 +108,7 @@ public class ButtonMapFragment extends Fragment implements ButtonMapContracts.Vi
     public void onResume() {
         super.onResume();
         mPresenter.subscribe(this);
+        setButtonBackgrounds();
         mPresenter.selectRegion();
     }
 
@@ -114,6 +117,169 @@ public class ButtonMapFragment extends Fragment implements ButtonMapContracts.Vi
         mPresenter = presenter;
     }
 
+    public void setButtonBackgrounds() {
+        if(mPresenter.checkRegionVisited(Constants.BLAGOEVGRAD_ID)) {
+            mBlagoevgradButton.setBackgroundResource(R.drawable.blagoevgrad_color);
+        } else {
+            mBlagoevgradButton.setBackgroundResource(R.drawable.blagoevgrad_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.BURGAS_ID)) {
+            mBurgasButton.setBackgroundResource(R.drawable.burgas_color);
+        } else {
+            mBurgasButton.setBackgroundResource(R.drawable.burgas_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.VARNA_ID)) {
+            mVarnaButton.setBackgroundResource(R.drawable.varna_color);
+        } else {
+            mVarnaButton.setBackgroundResource(R.drawable.varna_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.VELIKO_TARNOVO_ID)) {
+            mVelikoTarnovoButton.setBackgroundResource(R.drawable.veliko_tarnovo_color);
+        } else {
+            mVelikoTarnovoButton.setBackgroundResource(R.drawable.veliko_tarnovo_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.VIDIN_ID)) {
+            mVidinButton.setBackgroundResource(R.drawable.vidin_color);
+        } else {
+            mVidinButton.setBackgroundResource(R.drawable.vidin_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.VRACA_ID)) {
+            mVracaButton.setBackgroundResource(R.drawable.vraca_color);
+        } else {
+            mVracaButton.setBackgroundResource(R.drawable.vraca_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.GABROVO_ID)) {
+            mGabrovoButton.setBackgroundResource(R.drawable.gabrovo_color);
+        } else {
+            mGabrovoButton.setBackgroundResource(R.drawable.gabrovo_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.DOBRICH_ID)) {
+            mDobrichButton.setBackgroundResource(R.drawable.dobrich_color);
+        } else {
+            mDobrichButton.setBackgroundResource(R.drawable.dobrich_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.KARDJALI_ID)) {
+            mKardjaliButton.setBackgroundResource(R.drawable.kardjali_color);
+        } else {
+            mKardjaliButton.setBackgroundResource(R.drawable.kardjali_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.KUSTENDIL_ID)) {
+            mKustendilButton.setBackgroundResource(R.drawable.kustendil_color);
+        } else {
+            mKustendilButton.setBackgroundResource(R.drawable.kustendil_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.LOVECH_ID)) {
+            mLovechButton.setBackgroundResource(R.drawable.lovech_color);
+        } else {
+            mLovechButton.setBackgroundResource(R.drawable.lovech_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.MONTANA_ID)) {
+            mMontanaButton.setBackgroundResource(R.drawable.montana_color);
+        } else {
+            mMontanaButton.setBackgroundResource(R.drawable.montana_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.PAZARDJIK_ID)) {
+            mPazardjikButton.setBackgroundResource(R.drawable.pazardjik_color);
+        } else {
+            mPazardjikButton.setBackgroundResource(R.drawable.pazardjik_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.PERNIK_ID)) {
+            mPerniksButton.setBackgroundResource(R.drawable.pernik_color);
+        } else {
+            mPerniksButton.setBackgroundResource(R.drawable.pernik_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.PLEVEN_ID)) {
+            mPlevenButton.setBackgroundResource(R.drawable.pleven_color);
+        } else {
+            mPlevenButton.setBackgroundResource(R.drawable.pleven_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.PLOVDIV_ID)) {
+            mPlovdivButton.setBackgroundResource(R.drawable.plovdiv_color);
+        } else {
+            mPlovdivButton.setBackgroundResource(R.drawable.plovdiv_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.RAZGRAD_ID)) {
+            mRazgradButton.setBackgroundResource(R.drawable.razgrad_color);
+        } else {
+            mRazgradButton.setBackgroundResource(R.drawable.razgrad_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.RUSE_ID)) {
+            mRuseButton.setBackgroundResource(R.drawable.ruse_color);
+        } else {
+            mRuseButton.setBackgroundResource(R.drawable.ruse_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.SILISTRA_ID)) {
+            mSilistraButton.setBackgroundResource(R.drawable.silistra_color);
+        } else {
+            mSilistraButton.setBackgroundResource(R.drawable.silistra_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.SLIVEN_ID)) {
+            mSlivenButton.setBackgroundResource(R.drawable.sliven_color);
+        } else {
+            mSlivenButton.setBackgroundResource(R.drawable.sliven_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.SMOLYAN_ID)) {
+            mSmolyanButton.setBackgroundResource(R.drawable.smolyan_color);
+        } else {
+            mSmolyanButton.setBackgroundResource(R.drawable.smolyan_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.SOFIYA_ID)) {
+            mSofiyaButton.setBackgroundResource(R.drawable.sofiya_sofiya_oblast_color);
+        } else {
+            mSofiyaButton.setBackgroundResource(R.drawable.sofiya_sofiya_oblast_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.STARA_ZAGORA_ID)) {
+            mStaraZagoraButton.setBackgroundResource(R.drawable.stara_zagora_color);
+        } else {
+            mStaraZagoraButton.setBackgroundResource(R.drawable.stara_zagora_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.TARGOVISHTE_ID)) {
+            mTargovishteButton.setBackgroundResource(R.drawable.targovishte_color);
+        } else {
+            mTargovishteButton.setBackgroundResource(R.drawable.targovishte_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.HASKOVO_ID)) {
+            mHaskovoButton.setBackgroundResource(R.drawable.haskovo_color);
+        } else {
+            mHaskovoButton.setBackgroundResource(R.drawable.haskovo_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.SHUMEN_ID)) {
+            mShumenButton.setBackgroundResource(R.drawable.shumen_color);
+        } else {
+            mShumenButton.setBackgroundResource(R.drawable.shumen_selector);
+        }
+
+        if(mPresenter.checkRegionVisited(Constants.YAMBOL_ID)) {
+            mYambolButton.setBackgroundResource(R.drawable.yambol_color);
+        } else {
+            mYambolButton.setBackgroundResource(R.drawable.yambol_selector);
+        }
+    }
 
     @Override
     public void showLandmarks(List<Landmark> landmarks) {

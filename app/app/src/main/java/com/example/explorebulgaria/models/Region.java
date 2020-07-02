@@ -9,12 +9,14 @@ public class Region implements Serializable {
     private String regionName;
     private BigDecimal regionLatitude;
     private BigDecimal regionLongitude;
+    private boolean isRegionVisited;
 
-    public Region(int regionId, String regionName, BigDecimal regionLatitude, BigDecimal regionLongitude) {
+    public Region(int regionId, String regionName, BigDecimal regionLatitude, BigDecimal regionLongitude, boolean isRegionVisited) {
         this.regionId = regionId;
         this.regionName = regionName;
         this.regionLatitude = regionLatitude;
         this.regionLongitude = regionLongitude;
+        this.isRegionVisited = isRegionVisited;
     }
 
     public int getRegionId() { return regionId; }
@@ -33,4 +35,7 @@ public class Region implements Serializable {
 
     public void setRegionLongitude(BigDecimal regionLongitude) { this.regionLongitude = regionLongitude; }
 
+    public boolean isRegionVisited() { return isRegionVisited; }
+
+    public void setRegionVisited(boolean isRegionVisited) { this.isRegionVisited = isRegionVisited; }
 }

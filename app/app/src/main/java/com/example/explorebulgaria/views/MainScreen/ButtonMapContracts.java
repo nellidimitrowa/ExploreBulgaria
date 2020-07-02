@@ -20,5 +20,7 @@ public interface ButtonMapContracts {
         void subscribe(View view);
 
         void selectRegion();
+
+        boolean checkRegionVisited(int regionId);
     }
 }

@@ -10,6 +10,10 @@ public interface LandmarksListContracts {
 
         void setPresenter(Presenter presenter);
 
+        void showLoading();
+
+        void hideLoading();
+
         void showLandmarks(List<Landmark> landmarks);
 
         void showEmptyList();
@@ -18,6 +22,9 @@ public interface LandmarksListContracts {
 
         void showLandmarkDetails(Landmark landmark);
 
+        boolean isRegionVisited(List<Landmark> landmarks);
+
+        void changeRegionBackground(List<Landmark> landmarks);
     }
 
     interface Presenter {
@@ -28,7 +35,6 @@ public interface LandmarksListContracts {
 
         void selectLandmark(Landmark landmark);
 
-        void changeLandmarkToVisited(int landmarkId, Landmark landmark);
-
+        void changeLandmarkToVisited(Landmark landmark, int landmarkId);
     }
 }
