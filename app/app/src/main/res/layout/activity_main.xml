@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.6"
-        android:background="@color/darkBlue"
+        android:background="@color/map_background"
         android:orientation="vertical"></LinearLayout>
 
 </LinearLayout>

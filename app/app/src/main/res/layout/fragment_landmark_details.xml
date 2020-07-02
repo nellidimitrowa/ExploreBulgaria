@@ -30,7 +30,7 @@
                 android:textSize="15dp"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:textColor="#000000"/>
+                android:textColor="#666f4d"/>
             <ImageView
                 android:id="@+id/iv_landmark_detail"
                 android:layout_width="360dp"
@@ -47,14 +47,15 @@
                 android:layout_marginTop="15dp"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:textColor="#000000"
+                android:textColor="#4e553c"
                 android:layout_below="@+id/iv_landmark_detail"/>
             <TextView
                 android:id="@+id/tv_landmark_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
                 android:textSize="15dp"
-                android:textColor="#000000"
+                android:textColor="#666f4d"
                 android:layout_below="@+id/tv_landmark_description_title"/>
             <TextView
                 android:id="@+id/tv_work_time_title"
@@ -64,14 +65,14 @@
                 android:textSize="15dp"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
-                android:textColor="#000000"
+                android:textColor="#4e553c"
                 android:layout_below="@+id/tv_landmark_description"/>
             <TextView
                 android:id="@+id/tv_work_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
-                android:textColor="#000000"
+                android:textColor="#666f4d"
                 android:layout_below="@+id/tv_work_time_title"/>
             <TextView
                 android:id="@+id/tv_entrance_fee_title"
@@ -81,21 +82,23 @@
                 android:textSize="15dp"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
-                android:textColor="#000000"
+                android:textColor="#4e553c"
                 android:layout_below="@+id/tv_work_time"/>
             <TextView
                 android:id="@+id/tv_entrance_fee"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
-                android:textColor="#000000"
+                android:textColor="#666f4d"
                 android:layout_below="@+id/tv_entrance_fee_title"/>
             <Button
                 android:id="@+id/btn_navigation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="bottom"
                 android:textAlignment="center"
+                android:textColor="#4e553c"
+                android:background="#cad3b3"
+                android:textStyle="bold"
                 android:text="Навигация"
                 android:layout_below="@+id/tv_entrance_fee"/>
         </RelativeLayout>

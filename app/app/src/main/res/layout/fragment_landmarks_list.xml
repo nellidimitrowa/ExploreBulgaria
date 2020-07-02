@@ -8,12 +8,19 @@
     <RelativeLayout
         android:layout_height="match_parent"
         android:layout_width="match_parent">
-        
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_landmarks"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#055179"
+            android:background="@color/map_background"
             android:padding="4dp"/>
     </RelativeLayout>
 
