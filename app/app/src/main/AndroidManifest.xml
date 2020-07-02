@@ -7,9 +7,9 @@
     <application
         android:name=".AndroidApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/bg_flag_icon_round"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/app_icon_round"
         android:supportsRtl="true"
+        android:label="Опознай България"
         android:theme="@style/AppTheme">
         <activity android:name=".views.MainScreen.MainActivity">
             <intent-filter>
