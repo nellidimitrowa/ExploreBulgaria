@@ -21,7 +21,9 @@
         android:background="@color/map_background">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
             <TextView
                 android:id="@+id/tv_landmark_name"
                 android:layout_width="wrap_content"
